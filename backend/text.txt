@@ -1,0 +1,29 @@
+curl -X POST "https://upload.imagekit.io/api/v1/files/upload" \
+  -H "Authorization: Basic $Base64APIKey" \
+  -F "file=@C:\chatgpt-clone-completed\palki.mp4" \
+  -F "fileName=palki.mp4" \
+  -F "folder=/videos"
+
+
+
+
+echo -n private_Mw8XhRq72AkIhnRqplU6ZvSeKJg= | base64
+
+
+
+curl -X POST "http://localhost:3000/api/video/dub" \
+     -H "Content-Type: application/json" \
+     -H "xi-api-key: sk_03a13341726eca6c5db597f230aecd75ec7c67b5bc66c5d4" \
+     -d '{"videoUrl": "https://ik.imagekit.io/y29pv5rzpl/video.mp4", "sourceLanguage": "en", "targetLanguage": "hi"}'
+
+
+
+curl -X POST "http://localhost:3000/api/video/dub" ^
+     -H "Content-Type: application/json" ^
+     -H "xi-api-key: sk_03a13341726eca6c5db597f230aecd75ec7c67b5bc66c5d4" ^
+     -d '{"videoUrl": "https://ik.imagekit.io/y29pv5rzpl/video.mp4", "sourceLanguage": "en", "targetLanguage": "hi"}'
+
+
+
+curl -X GET "https://api.elevenlabs.io/v1/user" ^
+     -H "xi-api-key: sk_03a13341726eca6c5db597f230aecd75ec7c67b5bc66c5d4"
